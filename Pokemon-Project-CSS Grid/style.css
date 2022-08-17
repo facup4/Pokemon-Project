@@ -1,0 +1,422 @@
+/* 
+MAIN COLOR: #bb2e2c;
+GREY COLOR: #343a40
+
+*/
+
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* ------------------------ */
+/* GENERAL STYLES */
+/* ------------------------ */
+body {
+  font-family: "Inter", sans-serif;
+  color: #343a40;
+  border-bottom: 8px solid #bb2e2c;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.header-index,
+section {
+  margin-bottom: 96px;
+}
+
+h2 {
+  margin-bottom: 48px;
+  font-size: 36px;
+  letter-spacing: -0.5px;
+  /* 24 / 30 / 36 */
+}
+
+.grid-3-cols {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 80px;
+}
+
+.btn:link,
+.btn:visited {
+  background-color: #bb2e2c;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 500;
+
+  display: inline-block;
+  border-radius: 100px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: #881f1e;
+}
+
+.btn--big {
+  font-size: 18px;
+  padding: 16px 32px;
+  transition: all 0.3s;
+}
+
+.btn--small {
+  font-size: 14px;
+  padding: 8px 12px;
+}
+
+img {
+  border-radius: 12px;
+}
+
+/* NAV STYLE */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+
+  /* Because we want header to be sticky later */
+  height: 6.5rem;
+  padding: 0 4.8rem;
+}
+
+img.logo {
+  height: 3.2rem;
+}
+
+.main-nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  color: #333;
+  font-weight: 600;
+  font-size: 1.8rem;
+  transition: all 0.3s;
+}
+
+.main-nav-link:hover,
+.main-nav-link:active {
+  color: #bb2e2c;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link.nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  border-radius: 9px;
+  color: #fff;
+  background-color: #bb2e2c;
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link.nav-cta:active {
+  background-color: #881f1e#881f1e;
+}
+
+/* ------------------------ */
+/* COMPONENT STYLES */
+/* ------------------------ */
+
+/* HEADER */
+.header-index {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 80px;
+  margin-top: 64px;
+}
+
+.header-text-box {
+  align-self: center;
+}
+
+h1 {
+  margin-bottom: 32px;
+  font-size: 44px;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  /* 44 / 52 / 62 */
+
+  /* text-shadow: 0 5px 5px rgba(0, 0, 0, 0.2); */
+}
+
+.header-text {
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.img-adapt {
+  width: 100%;
+}
+
+/* FEATURES */
+.features-icon {
+  stroke: #bb2e2c;
+  width: 32px;
+  heigh: 32px;
+  margin-bottom: 24px;
+}
+
+.features-title {
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+
+.features-text {
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+/* TESTIMONIAL */
+.testimonial-section {
+  background-color: #bb2e2c;
+  color: #fff;
+  padding: 24px;
+  border-radius: 12px;
+}
+
+.testimonial-box {
+  grid-column: 2 / -1;
+  align-self: center;
+}
+
+.testimonial-box h2 {
+  margin-bottom: 24px;
+  /* 20 / 24 / 30 */
+  font-size: 24px;
+}
+
+.testimonial-text {
+  font-style: italic;
+  margin-bottom: 24px;
+  font-size: 18px;
+  line-height: 1.7;
+  color: ##e6fcf5;
+}
+
+.testimonial-author {
+  color: #c3fae8;
+}
+
+/* POKEMON */
+.pokemon {
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.07);
+  border-radius: 12px;
+}
+
+.pokemon img {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.pokemon-box {
+  padding: 32px;
+}
+
+h3 {
+  margin-bottom: 24px;
+  font-size: 20px;
+}
+
+.pokemon-details {
+  list-style: none;
+  margin-bottom: 48px;
+}
+
+.pokemon-details li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.pokemon-details li:last-child {
+  margin-bottom: 0;
+}
+
+.pokemon-icon {
+  stroke: #bb2e2c;
+  width: 24px;
+  height: 24px;
+}
+
+.pokemon-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+
+.pokemon-type {
+  width: 50px;
+  height: 50px;
+}
+
+/* POKEDEX SECTION */
+
+/* Style The Dropdown Button */
+.dropbtn {
+  background-color: #bb2e2c;
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 20px;
+  border-radius: 15px;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #881f1e;
+}
+
+.poke-companion {
+  width: 700px;
+  height: 350px;
+  margin: 100px auto;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 24px;
+
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  border-top: 4px solid #bb2e2c;
+}
+
+input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+select {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.companion-text {
+  font-size: 22px;
+  font-weight: 750;
+  margin-top: 20px;
+  color: #495057;
+}
+
+.pikachu {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-top: 20px;
+}
+
+.results--container {
+  width: 800px;
+  margin: 100px auto;
+  background-color: #bb2e2c;
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+
+  padding: 32px 48px 32px 86px;
+  border-radius: 8px;
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 86px;
+}
+
+.pokemon-selected {
+  width: 100px;
+  height: 100px;
+}
+
+.different-types {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+ul span {
+  font-size: 1.6rem;
+}
+
+.testimonial-section p {
+  font-size: 1.6rem;
+}
+
+footer {
+  margin-bottom: 48px;
+  font-size: 14px;
+  color: #495057;
+}
